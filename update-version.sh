@@ -10,7 +10,7 @@ git reset --hard origin/master
 ### ---- ###
 
 version=$(curl -s "https://lv.luzifer.io/v1/catalog/kubernetes/latest/version")
-grep -q "KUBECTL_VERSION=${version}$" Dockerfile && exit 0 || echo "Update required"
+grep -q "KUBECTL_VERSION=v${version}$" Dockerfile && exit 0 || echo "Update required"
 
 sed -Ei \
   -e "s/KUBECTL_VERSION=v[0-9.]+/KUBECTL_VERSION=v${version}/" \
