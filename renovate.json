@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-releases",
+      "managerFilePatterns": [
+        "/Dockerfile/"
+      ],
+      "matchStrings": [
+        "ARG KUBECTL_VERSION=(?<currentValue>.*?)\\s"
+      ],
+      "packageNameTemplate": "kubernetes/kubernetes"
+    }
+  ],
+  "extends": [
+    "local>luzifer/renovate-config"
+  ]
+}
