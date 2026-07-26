@@ -1,6 +1,6 @@
 FROM alpine:3.24.1@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b
 
-ARG KUBECTL_VERSION=v1.36.2
+ARG KUBECTL_VERSION=v1.36.3
 
 RUN set -ex \
  && apk --no-cache add \
